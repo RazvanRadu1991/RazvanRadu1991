@@ -1,0 +1,96 @@
+.search{
+    position:relative;
+    width:15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    transition-duration: 5s;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family:'noto Sans',sans-serif;
+    font-size:15px;
+    border: 1px solid white;
+    overflow: hidden;
+    background-image: url(/icons/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position: 45% 50%;
+
+}
+.search:hover{
+    border: 1px solid #ff9950;
+
+}
+.search:focus{
+    width:200px;
+    cursor: text;
+    padding-left:40px;
+    color: whitesmoke;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ff9950;
+    background: url(/icons/search-icon.png)no-repeat;
+    background-size: 22px;
+    background-position: 10px 50%;
+}
+
+body{
+    background-color: #303030;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    display:grid;
+    place-items: center;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    width:500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#58b819);
+    animation: rotate 4s linear infinite
+};
+.box::before{
+    content: '';
+    position: absolute;
+    width:500px;
+    height: 500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#0cf);
+}
+.box::after{
+    content:'';
+    position: absolute;
+    width:500px;
+    height:500px;
+    background-image: conic-gradient(transparent,transparent,transparent,#a2ca0f);
+    animation: rotate 4s linear infinite;
+    animation-delay: -3s;
+
+}
+.box span{
+    position: absolute;
+    inset:5px;
+    border-radius:16px;
+    background-color:black;
+    z-index:2;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+
+    }
+}
+
